@@ -32,7 +32,7 @@ import com.example.projectmanagementapp.service.TodoService;
 		    public String showProjects(Model model) {
 		        List<Project> projects = projectService.getAllProjects();
 		        model.addAttribute("projects", projects);
-		        return "projects"; // Name of the JSP view
+		        return "projects"; 
 		    }
 
 		    @PostMapping
@@ -47,7 +47,7 @@ import com.example.projectmanagementapp.service.TodoService;
 		        List<Todo> todos = todoService.getTodosByProjectId(projectId);
 		        model.addAttribute("project", project);
 		        model.addAttribute("todos", todos);
-		        return "project"; // Name of the JSP view for a single project
+		        return "project";
 		    }
 
 		    @PostMapping("/{projectId}/update")
